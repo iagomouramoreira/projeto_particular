@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { dueDateInMonth } from "./dates.ts";
+import { dueDateInMonth } from "./dates";
 import {
   billStatus,
   computeMonthSummary,
   spendingRatio,
   splitInstallments,
-} from "./summary.ts";
+} from "./summary";
 
 test("resume o mês com receitas, contas, gastos e parcelas", () => {
   const summary = computeMonthSummary({

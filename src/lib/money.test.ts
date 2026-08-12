@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { formatBRL, parseMoneyToCents } from "./money.ts";
+import { formatBRL, parseMoneyToCents } from "./money";
 
 test("parseia valores no formato brasileiro", () => {
   assert.equal(parseMoneyToCents("1.234,56"), 123456);
