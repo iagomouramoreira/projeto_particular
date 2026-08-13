@@ -1,0 +1,110 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id        String   @id @default(cuid())
+  name      String
+  kind      String
+  color     String
+  createdAt DateTime @default(now())
+
+  fixedBills      FixedBill[]
+  expenses        Expense[]
+  incomes         Income[]
+  installmentPlans InstallmentPlan[]
+}
+
+model FixedBill {
+  id             String   @id @default(cuid())
+  name           String
+  amountCents    Int
+  dueDay         Int
+  variableAmount Boolean  @default(false)
+  paymentMethod  String?
+  notes          String?
+  active         Boolean  @default(true)
+  categoryId     String
+  category       Category @relation(fields: [categoryId], references: [id])
+  createdAt      DateTime @default(now())
+
+  payments BillPayment[]
+}
+
+model BillPayment {
+  id          String    @id @default(cuid())
+  fixedBillId String
+  fixedBill   FixedBill @relation(fields: [fixedBillId], references: [id], onDelete: Cascade)
+  year        Int
+  month       Int
+  amountCents Int
+  paidAt      DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@unique([fixedBillId, year, month])
+}
+
+model Expense {
+  id          String   @id @default(cuid())
+  description String
+  amountCents Int
+  date        String
+  unplanned   Boolean  @default(true)
+  notes       String?
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model Income {
+  id          String   @id @default(cuid())
+  description String
+  amountCents Int
+  date        String
+  source      String?
+  notes       String?
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime @default(now())
+}
+
+model InstallmentPlan {
+  id          String   @id @default(cuid())
+  description String
+  totalCents  Int
+  count       Int
+  notes       String?
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id])
+  createdAt   DateTime @default(now())
+
+  installments Installment[]
+}
+
+model Installment {
+  id          String          @id @default(cuid())
+  planId      String
+  plan        InstallmentPlan @relation(fields: [planId], references: [id], onDelete: Cascade)
+  number      Int
+  amountCents Int
+  year        Int
+  month       Int
+  paidAt      DateTime?
+
+  @@unique([planId, number])
+}
+
+model SavingsGoal {
+  id           String   @id @default(cuid())
+  name         String
+  targetCents  Int
+  currentCents Int      @default(0)
+  deadline     String?
+  notes        String?
+  createdAt    DateTime @default(now())
+}
