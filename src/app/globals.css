@@ -43,6 +43,7 @@ body {
 body {
   font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   min-height: 100%;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 h1,
@@ -59,8 +60,9 @@ textarea {
   background: #fff;
   color: var(--ink);
   border-radius: 0.75rem;
-  padding: 0.7rem 0.85rem;
+  padding: 0.75rem 0.85rem;
   font: inherit;
+  font-size: 16px;
   outline: none;
 }
 

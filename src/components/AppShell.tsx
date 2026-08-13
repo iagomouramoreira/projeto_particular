@@ -67,12 +67,12 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </aside>
 
         <div className="flex min-w-0 flex-1 flex-col">
-          <header className="sticky top-0 z-10 border-b border-line bg-paper/90 px-4 py-3 backdrop-blur md:hidden">
+          <header className="sticky top-0 z-10 border-b border-line bg-paper/90 px-4 py-3 pt-[max(0.75rem,env(safe-area-inset-top))] backdrop-blur md:hidden">
             <div className="flex items-center gap-2">
               <Wallet size={18} className="text-pine" />
               <span className="font-display text-lg">projeto_particular</span>
             </div>
-            <nav className="mt-3 flex gap-2 overflow-x-auto pb-1">
+            <nav className="mt-3 flex gap-2 overflow-x-auto pb-1 [-webkit-overflow-scrolling:touch]">
               {LINKS.map((link) => {
                 const active =
                   link.href === "/"
@@ -82,7 +82,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-semibold ${
+                    className={`min-h-10 whitespace-nowrap rounded-full px-3 py-2 text-xs font-semibold ${
                       active ? "bg-pine text-white" : "bg-card text-muted"
                     }`}
                   >

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { DM_Sans, Fraunces } from "next/font/google";
 import { AppShell } from "@/components/AppShell";
 import "./globals.css";
@@ -17,6 +17,18 @@ export const metadata: Metadata = {
   title: "projeto_particular — Controle financeiro",
   description:
     "Controle de contas fixas, gastos não programados, receitas e metas pessoais.",
+  appleWebApp: {
+    capable: true,
+    title: "Finanças",
+    statusBarStyle: "default",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#f3efe6",
 };
 
 export default function RootLayout({

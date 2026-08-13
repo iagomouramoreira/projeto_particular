@@ -28,7 +28,7 @@ export default async function MetasPage() {
             <Field label="Nome">
               <input name="name" required placeholder="Reserva de emergência" />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Objetivo">
                 <input name="target" required placeholder="10.000,00" />
               </Field>

@@ -39,7 +39,7 @@ export default async function ParcelasPage({
             <Field label="Descrição">
               <input name="description" required placeholder="Notebook em 10x" />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Valor total">
                 <input name="amount" required placeholder="3.000,00" />
               </Field>

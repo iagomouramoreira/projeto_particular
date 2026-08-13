@@ -34,7 +34,7 @@ export default async function ReceitasPage({
             <Field label="Descrição">
               <input name="description" required placeholder="Salário" />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Valor">
                 <input name="amount" required placeholder="4.500,00" />
               </Field>

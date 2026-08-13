@@ -47,7 +47,7 @@ export default async function ContasFixasPage({
             <Field label="Nome">
               <input name="name" required defaultValue={editing?.name ?? ""} placeholder="Internet" />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               <Field label="Valor">
                 <input
                   name="amount"
