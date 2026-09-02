@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iago Moura — Currículo</title>
+  <style>
+    :root {
+      --ink: #1a2433;
+      --muted: #5b6573;
+      --line: #d5dde6;
+      --navy: #0f3350;
+      --teal: #186a80;
+      --bg: #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    @page {
+      size: A4;
+      margin: 9.5mm 11mm 9.5mm 11mm;
+    }
+
+    html, body {
+      background: #e8edf3;
+      color: var(--ink);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 9.55pt;
+      line-height: 1.32;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      background: var(--bg);
+      padding: 12mm 14mm 11mm;
+      box-shadow: 0 8px 28px rgba(21, 32, 51, 0.12);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      border-bottom: 2.5px solid var(--navy);
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 24pt;
+      letter-spacing: 0.06em;
+      line-height: 0.95;
+      color: var(--navy);
+      font-weight: 750;
+    }
+
+    .headline {
+      margin-top: 5px;
+      color: var(--teal);
+      font-size: 10pt;
+      font-weight: 650;
+    }
+
+    .contact {
+      text-align: right;
+      color: var(--muted);
+      font-size: 8.7pt;
+      line-height: 1.5;
+    }
+
+    .contact a {
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    h2 {
+      font-size: 8.6pt;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 2px;
+      margin: 9px 0 6px;
+    }
+
+    .profile { text-align: justify; }
+
+    .skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 20px;
+    }
+
+    .skill-group strong {
+      display: block;
+      color: var(--teal);
+      font-size: 9pt;
+      margin-bottom: 2px;
+    }
+
+    ul { padding-left: 15px; }
+    li { margin-bottom: 1px; }
+
+    .job { margin-bottom: 7px; break-inside: avoid; page-break-inside: avoid; }
+
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .company { font-weight: 700; color: var(--navy); }
+    .role { font-weight: 650; }
+    .meta { color: var(--muted); font-size: 8.6pt; white-space: nowrap; }
+
+    .certs {
+      columns: 2;
+      column-gap: 18px;
+    }
+
+    .certs li { break-inside: avoid; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr;
+      gap: 0 22px;
+    }
+
+    .two-col h2:first-child { margin-top: 9px; }
+
+    @media print {
+      html, body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        width: auto;
+        min-height: 0;
+        padding: 0;
+      }
+      a { color: inherit; }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header>
+      <div>
+        <h1>IAGO MOURA</h1>
+        <div class="headline">Product Owner · Product Design · IA para produtividade</div>
+      </div>
+      <div class="contact">
+        Cotia, SP · (11) 95551-6738<br />
+        <a href="mailto:iagommoreira@gmail.com">iagommoreira@gmail.com</a><br />
+        <a href="https://linkedin.com/in/iago-moura-224aa5a0">linkedin.com/in/iago-moura-224aa5a0</a>
+      </div>
+    </header>
+
+    <h2>Perfil profissional</h2>
+    <p class="profile">
+      Product Owner com sólida experiência em análise de negócios e gestão de produtos digitais, atuando em ambientes ágeis.
+      Atua com Product Design — Figma, desenvolvimento de wireframes, testes com usuários e mapeamento da jornada do cliente (CX e UX).
+      PO com foco em Inteligência Artificial para ganho de produtividade e maior assertividade no desempenho do time.
+      Forte capacidade em traduzir necessidades de negócio em soluções técnicas, com conhecimento em SQL e .NET.
+      Habilidade em liderar times multidisciplinares, gerir backlog, facilitar cerimônias ágeis e alinhar estratégias de produto com objetivos da empresa.
+    </p>
+
+    <h2>Competências-chave</h2>
+    <div class="skills">
+      <div class="skill-group">
+        <strong>Produto e agilidade</strong>
+        <ul>
+          <li>Gestão de backlog e roadmap de produto</li>
+          <li>Facilitação de cerimônias Scrum (Daily, Planning, Review, Retrospective)</li>
+          <li>Análise de requisitos e modelagem de soluções</li>
+          <li>Criação de relatórios estratégicos (SQL)</li>
+          <li>Colaboração com equipes técnicas e stakeholders</li>
+          <li>Metodologias ágeis (Scrum, ITIL)</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <strong>Product Design, CX, UX e IA</strong>
+        <ul>
+          <li>Product Design e prototipação no Figma</li>
+          <li>Desenvolvimento de wireframes e fluxos de tela</li>
+          <li>Testes com usuários e validação de hipóteses</li>
+          <li>Jornada do cliente (CX) e experiência do usuário (UX)</li>
+          <li>IA para produtividade e assertividade do time</li>
+          <li>SQL, .NET, GIT · DevOps, Confluence, Miro, Figma, GLPI, Trello</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Experiência profissional</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="company">Carglass® Brasil</span> — Barueri, SP · <span class="role">Product Owner</span>
+        </div>
+        <div class="meta">jun/2024 – atual (Home Office)</div>
+      </div>
+      <ul>
+        <li>Liderança na definição da visão do produto alinhada à estratégia do negócio</li>
+        <li>Gestão do backlog, priorizando demandas com base em valor de negócio</li>
+        <li>Facilitação de cerimônias Scrum e alinhamento com stakeholders</li>
+        <li>Coleta de feedbacks e ajustes contínuos no produto com base em KPIs</li>
+        <li>Apoio técnico com conhecimento básico em .NET/.NET Core e consultas SQL</li>
+        <li>Product Design: wireframes, prototipação e interfaces no Figma, em parceria com o time de desenvolvimento</li>
+        <li>Mapeamento da jornada do cliente (CX) e evolução da experiência do usuário (UX), com testes com usuários</li>
+        <li>Uso de Inteligência Artificial para ganho de produtividade e maior assertividade no desempenho do time</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div>
+          <span class="company">Carglass® Brasil</span> — Barueri, SP · <span class="role">Analista Full Stack Jr</span>
+        </div>
+        <div class="meta">ago/2020 – ago/2024 (Home Office)</div>
+      </div>
+      <ul>
+        <li>Análise e correção de bugs em front-end e back-end</li>
+        <li>Criação de scripts, jobs, procedures e rotinas de ETL</li>
+        <li>Uso de GIT para versionamento e colaboração com a equipe de desenvolvimento</li>
+        <li>Atendimento e suporte a usuários finais</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div><span class="company">America Net Telecom</span> — São Paulo, SP</div>
+      </div>
+      <ul>
+        <li><span class="role">Desenvolvedor de Sistemas Jr</span> — fev/2016 – abr/2020</li>
+        <li><span class="role">Auxiliar Data Center</span> — dez/2014 – fev/2016</li>
+        <li><span class="role">Auxiliar Financeiro/Administrativo</span> — ago/2013 – dez/2014</li>
+      </ul>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h2>Formação acadêmica</h2>
+        <div>
+          <span class="company">Universidade Paulista – UNIP</span>
+          <span class="meta"> · 2015 a 2017</span><br />
+          Tecnologia em Análise e Desenvolvimento de Sistemas
+        </div>
+      </div>
+      <div>
+        <h2>Idiomas</h2>
+        <ul>
+          <li>Português: nativo</li>
+          <li>Inglês: básico</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Certificações e cursos</h2>
+    <ul class="certs">
+      <li>Imersão IA Revolution, Treta Educação — abr/2025</li>
+      <li>SCRUM Product Owner, Green Treinamentos — jul/2024</li>
+      <li>Microsoft Web Developer (20480+20486) — jul/2021</li>
+      <li>ITIL® Foundation V3, Impacta — mar/2018</li>
+      <li>Scrum - Gestão e Desenvolvimento Ágil de Projetos (Online), Impacta — ago/2017</li>
+      <li>SQL - Criando Sistemas de Banco de Dados - Módulo II (Online), Impacta — jun/2017</li>
+      <li>SQL - Criando Sistemas de Banco de Dados - Módulo I (Online), Impacta — jan/2017</li>
+      <li>CSS3 (online), Impacta — set/2016</li>
+      <li>HTML5 Fundamentos (online), Impacta — set/2016</li>
+      <li>ASP.NET 2013 com C# - Acesso a Dados, Impacta — jun/2016</li>
+      <li>Introdução à Programação Orientada a Objeto, Impacta — mar/2016</li>
+    </ul>
+  </article>
+</body>
+</html>
