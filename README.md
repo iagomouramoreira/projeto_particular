@@ -1,1 +1,3 @@
-# projeto_carglass_v2
+# projeto_particular
+
+Inclui o currículo atualizado em [`curriculo/`](curriculo/).
